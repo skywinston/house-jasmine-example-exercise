@@ -3,10 +3,12 @@ function House (numberOfDoors, numberOfWindows) {
   this.numberOfWindows = numberOfWindows;
   this.toString = function(){
     // This is a much cleaner, and better solution, via Brett:
-    var houseString = (this.numberOfDoors != 1) ? "doors" : "door";
+    var doorString = (this.numberOfDoors != 1) ? "doors" : "door";
     var windowString = (this.numberOfWindows != 1) ? "windows" : "window";
 
-    return "The house has " + this.numberOfDoors + " " + houseString + " and " + this.numberOfWindows + " " + windowString;
+    return "The house has " + this.numberOfDoors + " " 
+    + doorString + " and " + this.numberOfWindows + " "
+    + windowString;
 
     // My original and really verbose solution:
     // if(this.numberOfDoors > 1 && this.numberOfWindows === 1){
